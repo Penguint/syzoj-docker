@@ -31,7 +31,7 @@ services:
     ports:
       - 5283:5283
   judger:
-    image: syzoj/syzoj:base
+    image: penguint/syzoj:base
     networks:
       - net
     volumes:

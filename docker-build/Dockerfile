@@ -1,4 +1,8 @@
-FROM ubuntu
+FROM ubuntu:bionic
+
+SHELL ["/bin/bash", "-c"]
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Shanghai
 RUN apt-get update -y && apt-get install -y ca-certificates curl gnupg && \
     echo "deb https://deb.nodesource.com/node_8.x bionic main" >> /etc/apt/sources.list.d/nodesource.list && \
     echo "deb-src https://deb.nodesource.com/node_8.x bionic main" >> /etc/apt/sources.list.d/nodesource.list && \
