@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/
 cp -r -T config-base config
 SECRET=$(dd if=/dev/urandom | tr -dc A-Za-z0-9 | head -c${1:-16})
 sed -i "s/@SESSION_SECRET@/$SECRET/g" config/web.json
